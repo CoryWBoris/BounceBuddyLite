@@ -1,4 +1,4 @@
-# BounceBuddyLite
+i# BounceBuddyLite
 
 ![Stable Badge](https://img.shields.io/badge/-stable-blue)  
 By: Cory Boris  
@@ -12,7 +12,7 @@ This control surface checks your arrangement view set for any locator named 'sta
 -move a start or end locator  
 -delete an extra start or end locator  
 -add or rename a new start or end locator  
--expand your arrangement inside your 'start' and 'end' span
+-expand your arrangement inside your 'start' and 'end' span  
 -delete a section of your arrangement inside your 'start' and 'end' span  
 
 ## 6 Steps to setup:  
