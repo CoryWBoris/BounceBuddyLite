@@ -44,7 +44,7 @@ But then, this leaves the issue of highlighting. Yes, you can just highlight, su
 
 Or you can install BBL and forget about all your worries (with respect to selecting an exportable region of your ableton set that is). I offer a solution to always keep track of your exportable region provided that you add at least two locators to the set, one named ‘start’ and one named ‘end’. I think this is a convenient answer to those who would define the start and end points of their set anyway and would want to be able to click a blank midi clip and just select export in an easy two step workflow process.  
 ## Open Issues:  
-I have not seen any errors so far when run by itself. The only thing which would potentially show an error would be when running with older versions of AutoClip. To avoid this error, I updated AutoClip to its latest version which ignores tracks named ‘DefaultBounce’. Also do not run at the same time as my other RemoteScript AutoBounceLength.py as it will cause a conflict since they are essentially the same program.
+I have not seen any errors so far when run by itself. The only thing which would potentially show an error would be when running with older versions of AutoClip. To avoid this error, I updated AutoClip to its latest version which ignores tracks named ‘DefaultBounce’. Also do not run BounceBuddyLite at the same time as my other Remote Script AutoBounceLength.py since they are essentially similar enough programs to cause a conflict of resource allocation.
 
 ## Other Related Programs:
 <a href="https://coryboris.gumroad.com/l/TrueAutoColor">TrueAutoColor</a>  
