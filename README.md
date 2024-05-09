@@ -11,7 +11,9 @@ By: Cory Boris
 This control surface checks your arrangement view set for any locator named 'start' or 'end', and if there is at least one of each, then the control surface detects the left most 'start' locator and the right most 'end' locator, adds a new track at the top of your set named DefaultBounce, and creates a blank midi clip the same length as the timespan of the previously mentioned 'start' and end' locators, and with the clip inserted at the location in the timeline of the leftmost 'start' locator. This is done dynamically and in real time whether you:  
 -move a start or end locator  
 -delete an extra start or end locator  
--add or rename a new start or end locator
+-add or rename a new start or end locator  
+-expand your arrangement inside your 'start' and 'end' span
+-delete a section of your arrangement inside your 'start' and 'end' span  
 
 ## 6 Steps to setup:  
 **Note: this assumes you are using the default user library folder. If you have moved this folder externally or otherwise, make a Remote Scripts folder inside of whatever user library folder you have pointed Ableton to, and start from step 2:**
