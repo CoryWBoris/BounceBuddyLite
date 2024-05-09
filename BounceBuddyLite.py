@@ -242,6 +242,7 @@ class BounceBuddyLite(ControlSurface):
         if self.end_cue:
             self.end_cue_name = self.end_cue.name.lower() + '_' + str(self.end_cue.time)
         self.updated_cue_points = {f"{cue.name.lower()}_{cue.time}": cue.time for cue in self.song.cue_points}
+        renamed_cues = set()
         if self.updated_cue_points != self.initial_cue_points:
             # find the elements that were only in one set but not the other
             renamed_cues = set(self.updated_cue_points.keys()) ^ set(self.initial_cue_points.keys())
