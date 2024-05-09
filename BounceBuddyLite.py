@@ -16,10 +16,10 @@ class BounceBuddyLite(ControlSurface):
         self.prev_end_cue_name = ''
         self.start_cue = min((cue for cue in self.song.cue_points if cue.name.lower() == 'start'), key=lambda cue: cue.time, default=None)
         if self.start_cue:
-            self.start_cue_name = self.start_cue.name + '_' + str(self.start_cue.time)
+            self.start_cue_name = self.start_cue.name.lower() + '_' + str(self.start_cue.time)
         self.end_cue = max((cue for cue in self.song.cue_points if cue.name.lower() == 'end'), key=lambda cue: cue.time, default=None)
         if self.end_cue:
-            self.end_cue_name = self.end_cue.name + '_' + str(self.end_cue.time)
+            self.end_cue_name = self.end_cue.name.lower() + '_' + str(self.end_cue.time)
         self.song.add_cue_points_listener(self.on_cue_points_changed)  # Listen to changes in cue points
         self.song.add_cue_points_listener(self.on_cue_points_moved)
         for cue in self.song.cue_points:
@@ -37,10 +37,10 @@ class BounceBuddyLite(ControlSurface):
         self.prev_end_cue_name = self.end_cue_name
         self.start_cue = min((cue for cue in self.song.cue_points if cue.name.lower() == 'start'), key=lambda cue: cue.time, default=None)
         if self.start_cue:
-            self.start_cue_name = self.start_cue.name + '_' + str(self.start_cue.time)
+            self.start_cue_name = self.start_cue.name.lower() + '_' + str(self.start_cue.time)
         self.end_cue = max((cue for cue in self.song.cue_points if cue.name.lower() == 'end'), key=lambda cue: cue.time, default=None)
         if self.end_cue:
-            self.end_cue_name = self.end_cue.name + '_' + str(self.end_cue.time)
+            self.end_cue_name = self.end_cue.name.lower() + '_' + str(self.end_cue.time)
         print("Cue points changed")
         print("initial_cue_points: ", self.initial_cue_points)
         updated_cue_points = {f"{cue.name.lower()}_{cue.time}": cue.time for cue in self.song.cue_points}
@@ -227,20 +227,20 @@ class BounceBuddyLite(ControlSurface):
         # Update rightmost_end_cue_time and leftmost_start_cue_time
         self.start_cue = min((cue for cue in self.song.cue_points if cue.name.lower() == 'start'), key=lambda cue: cue.time, default=None)
         if self.start_cue:
-            self.start_cue_name = self.start_cue.name + '_' + str(self.start_cue.time)
+            self.start_cue_name = self.start_cue.name.lower() + '_' + str(self.start_cue.time)
         self.end_cue = max((cue for cue in self.song.cue_points if cue.name.lower() == 'end'), key=lambda cue: cue.time, default=None)
         if self.end_cue:
-            self.end_cue_name = self.end_cue.name + '_' + str(self.end_cue.time)
+            self.end_cue_name = self.end_cue.name.lower() + '_' + str(self.end_cue.time)
 
     def on_cue_name_changed(self):
         self.prev_start_cue_name = self.start_cue_name
         self.prev_end_cue_name = self.end_cue_name
         self.start_cue = min((cue for cue in self.song.cue_points if cue.name.lower() == 'start'), key=lambda cue: cue.time, default=None)
         if self.start_cue:
-            self.start_cue_name = self.start_cue.name + '_' + str(self.start_cue.time)
+            self.start_cue_name = self.start_cue.name.lower() + '_' + str(self.start_cue.time)
         self.end_cue = max((cue for cue in self.song.cue_points if cue.name.lower() == 'end'), key=lambda cue: cue.time, default=None)
         if self.end_cue:
-            self.end_cue_name = self.end_cue.name + '_' + str(self.end_cue.time)
+            self.end_cue_name = self.end_cue.name.lower() + '_' + str(self.end_cue.time)
         self.updated_cue_points = {f"{cue.name.lower()}_{cue.time}": cue.time for cue in self.song.cue_points}
         if self.updated_cue_points != self.initial_cue_points:
             # find the elements that were only in one set but not the other
