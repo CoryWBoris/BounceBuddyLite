@@ -1,4 +1,4 @@
-i# BounceBuddyLite
+# BounceBuddyLite
 
 ![Stable Badge](https://img.shields.io/badge/-stable-blue)  
 By: Cory Boris  
